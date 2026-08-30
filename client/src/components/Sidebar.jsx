@@ -11,7 +11,8 @@ import {
   Sparkles,
   Users,
   Award,
-  BarChart3
+  BarChart3,
+  Code
 } from 'lucide-react';
 
 export default function Sidebar() {
@@ -98,6 +99,13 @@ export default function Sidebar() {
             </NavLink>
           </>
         )}
+
+        {/* Developer Team Link (All Roles) */}
+        <div className="sidebar-section-label" style={{ marginTop: '1rem' }}>About</div>
+        <NavLink to="/developer" className={({ isActive }) => `sidebar-nav-item ${isActive ? 'active' : ''}`}>
+          <Code size={20} />
+          <span>Developer Team</span>
+        </NavLink>
       </nav>
 
       {/* Footer Profile Snippet */}
